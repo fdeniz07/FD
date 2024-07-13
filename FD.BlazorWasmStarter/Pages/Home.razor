@@ -1,8 +1,11 @@
 ﻿@page "/"
 @using System.Text
 @using FD.BlazorWasmStarter.Enums
+@inject NavigationManager Navigation
+@inject IToastService ToastService
 
 <PageTitle>Home</PageTitle>
+
 
 <div class="card-body">
     <div class="input-group mb-3">
@@ -11,7 +14,6 @@
         <span @onclick="HandleGeneratePasswordClick" @onmouseenter="@(() => OnEmojiHover("generate"))" @onmouseleave="@OnEmojiMouseLeft" class="input-group-text my-clickable-button @onHoverGenerateCss" id="basic-addon3">🔄</span>
         <span @onclick="HandleSavePasswordClick" @onmouseenter="@(() => OnEmojiHover("save"))" @onmouseleave="@OnEmojiMouseLeft" class="input-group-text my-clickable-button @onHoverSaveCss" id="basic-addon4">💾</span>
     </div>
-
     <div class="mb-3">
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" @bind="@includeNumbers" @oninput="@((args) => HandleCheckboxOnChange(args,CheckBoxActionType.Numbers))">
@@ -30,20 +32,33 @@
             <label class="form-check-label" for="inlineCheckbox4">Special Chars</label>
         </div>
     </div>
-
-    <div>
-        <p class="mb-1 mt-3">Password Length: <b>@passwordLength</b></p>
-
-        <input type="range" class="form-range" step="1" min="8" max="50" @bind="passwordLength" @bind:event="onchange" />
+    <div class="container mt-4">
+        <h5 class="mb-3">Password Length</h5>
+        <div class="row align-items-center">
+            <div class="col-md-2 mb-2 mb-md-0">
+                <input @bind=@passwordLength type="number" class="form-control" min="6" max="50" @oninput="@HandlePasswordLengthInputOnChange"/>
+            </div>
+            <div class="col-md-8 mb-2 mb-md-0">
+                <input type="range" class="form-range" step="1" min="6" max="50" @bind="passwordLength" @oninput="HandleRangeOnChange"/>
+            </div>
+            <div class="col-md-2">
+                <span class="badge bg-primary fs-6">@passwordLength characters</span>
+            </div>
+        </div>
     </div>
 </div>
+
+@* @bind metodu onChange ile birlikte calisir. onInput ile calisamaz. Eger diger metodlarla kullanmak istersek kendi metodumuzu yazariz. *@
+@* Kendi metodumuzu yazdigimizda, sistemin bekledigi dönüs tipini parametresiz olarak saglanirsa daha temiz kod yazilabiliyor. Eger parametre vermek gerekirse, o zaman lambda exp.vermek gerekiyor. *@
+
+
 
 
 
 
 <div class="card mt-3">
     <div class="card-header">
-        💾 Saved Passwords
+        <MaterialSaveIcon Width="2" Height="2" Color="#1A5319" OnClick="@HandleSaveIconClick"/>  Saved Passwords
     </div>
     <div class="card-body">
         <ul class="list-group">
@@ -54,6 +69,7 @@
         </ul>
     </div>
 </div>
+
 
 
 
@@ -82,6 +98,55 @@
     private const string specialCharacters = "!@#$%^&*()_+-=[]{}|;:,.<>?";
 
 
+
+    #region Overrides of ComponentBase
+
+    protected override void OnInitialized()
+    {
+        GeneratePassword();
+
+        base.OnInitialized();
+    }
+
+    #endregion
+
+
+    private void HandleSaveIconClick()
+    {
+        Navigation.NavigateTo("/counter");
+    }
+
+    private void HandlePasswordLengthInputOnChange(ChangeEventArgs args)
+    {
+        if (args.Value is null)
+            return;
+
+        passwordLength = Convert.ToInt32(args.Value);
+
+        GeneratePassword();
+    }
+
+    private void HandleRangeOnChange(ChangeEventArgs args)
+    {
+        if (args.Value is null)
+            return;
+
+        passwordLength = Convert.ToInt32(args.Value);
+
+        GeneratePassword();
+    }
+
+    private void HandleSavePasswordClick()
+    {
+        // if (string.IsNullOrEmpty(password) || savePasswords.Any(x => x == password))
+        if (string.IsNullOrEmpty(password) || savedPasswords.Any(x => x == password))
+            return;
+
+        savedPasswords.Add(password);
+
+        ToastService.ShowInfo("The selected password saved!");
+    }
+
     private void HandleCheckboxOnChange(ChangeEventArgs args, CheckBoxActionType actionType)
     {
         if (args.Value is null) // args.Value == null seklinde kullanmiyoruz. Cünkü operatörler sonradan override edilebiliyor.
@@ -100,32 +165,10 @@
     }
 
 
-    private void HandleSavePasswordClick()
-    {
-        // if (string.IsNullOrEmpty(password) || savePasswords.Any(x => x == password))
-        if (string.IsNullOrEmpty(password) || savedPasswords.Any(x => x == password))
-            return;
-
-        savedPasswords.Add(password);
-    }
-
     private void HandleGeneratePasswordClick()
     {
         GeneratePassword();
     }
-
-
-    #region Overrides of ComponentBase
-
-    protected override void OnInitialized()
-    {
-        GeneratePassword();
-
-        base.OnInitialized();
-    }
-
-    #endregion
-
 
     private void GeneratePassword()
     {
@@ -189,3 +232,17 @@
         onHoverSaveCss = string.Empty;
     }
 }
+
+<style>
+    .form-range::-webkit-slider-thumb {
+        background: #0d6efd;
+    }
+
+    .form-range::-moz-range-thumb {
+        background: #0d6efd;
+    }
+
+    .form-range::-ms-thumb {
+        background: #0d6efd;
+    }
+</style>
