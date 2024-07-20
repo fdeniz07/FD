@@ -4,6 +4,19 @@
 
 /* Blazor Error UI's CSS*/
 
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 2px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;

@@ -48,7 +48,7 @@
                     ChatMessage.FromSystem("Sen şiir ve şarkı sözü yazmakta usta bir asistansın. Görevin, kullanıcıya şiir ve şarkı sözleri yazmakta yol göstermek, yardımcı olmak ve çözüm üretmektir."),
                     ChatMessage.FromUser(prompt),
                 },
-                    Model = Models.Gpt_4o,
+                    Model = OpenAI.ObjectModels.Models.Gpt_4o,
                     MaxTokens = 4096,
                 });
             if (completionResult.Successful)
