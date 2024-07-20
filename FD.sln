@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FD.BlazorWasmStarter", "FD.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FD.Blazor.OpenAIStarter", "FD.Blazor.OpenAIStarter\FD.Blazor.OpenAIStarter.csproj", "{F1E2E6DA-154A-437E-B23E-F4CDA8B621AA}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FD.BlazorGiftSuggestionApp", "FD.BlazorGiftSuggestionApp\FD.BlazorGiftSuggestionApp.csproj", "{FD11D9D0-6EB3-4A82-B765-B00DD1E3376E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F1E2E6DA-154A-437E-B23E-F4CDA8B621AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1E2E6DA-154A-437E-B23E-F4CDA8B621AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1E2E6DA-154A-437E-B23E-F4CDA8B621AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD11D9D0-6EB3-4A82-B765-B00DD1E3376E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD11D9D0-6EB3-4A82-B765-B00DD1E3376E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD11D9D0-6EB3-4A82-B765-B00DD1E3376E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD11D9D0-6EB3-4A82-B765-B00DD1E3376E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
