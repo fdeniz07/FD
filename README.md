@@ -7,18 +7,18 @@
 
 
 ## 2-BlazorOpenAiStarter
-<p>Home Page</p>
+#### Home Page
 <img src="https://github.com/fdeniz07/FD/blob/master/Images/Open%20AI%20Starter/1-%20Home.JPG" />
 
-<p>ChatGPT Page</p>
+#### ChatGPT Page
 <img src="https://github.com/fdeniz07/FD/blob/master/Images/Open%20AI%20Starter/2-ChaptGPT-%20Poem%20Generate.JPG" />
 
-<p>Dall-e Page</p>
+#### Dall-e Page
 <img src="https://github.com/fdeniz07/FD/blob/master/Images/Open%20AI%20Starter/3-Dall-e%20-%20Image%20Generate.JPG" />
 
 ## 3-BlazorGiftSuggestionApp
-<p>Request</p>
+#### Request
 <img src="https://github.com/fdeniz07/FD/blob/master/Images/Gift%20Suggestions%20App/1.JPG" />
 
-<p>Response</p>
+#### Response
 <img src="https://github.com/fdeniz07/FD/blob/master/Images/Gift%20Suggestions%20App/2-Response.JPG" />
