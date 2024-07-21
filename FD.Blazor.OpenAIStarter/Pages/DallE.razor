@@ -127,7 +127,7 @@
 
     protected class FormModel
     {
-        [Required, Range(1, 5)]
+        [Required, MinLength(5), MaxLength(250)]
         public string Prompt { get; set; } = string.Empty;
 
         [Required, Range(1, 10)]
