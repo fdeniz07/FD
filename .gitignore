@@ -364,3 +364,9 @@ FodyWeavers.xsd
 /FD.Blazor.OpenAIStarter/wwwroot/appsettings.json
 /FD.BlazorGiftSuggestionApp/wwwroot/css/app.css
 /FD.BlazorGiftSuggestionApp/wwwroot/appsettings.json
+/FD.VideoTranscriberApp.ConsoleClient/ffmpeg/ffmpeg.exe
+/FD.VideoTranscriberApp.ConsoleClient/ffmpeg/ffplay.exe
+/FD.VideoTranscriberApp.ConsoleClient/ffmpeg/ffprobe.exe
+/FD.VideoTranscriberApp.ConsoleClient/ffmpeg.exe
+/FD.VideoTranscriberApp.ConsoleClient/ffplay.exe
+/FD.VideoTranscriberApp.ConsoleClient/ffprobe.exe
