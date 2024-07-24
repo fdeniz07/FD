@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Xabe.FFmpeg" Version="5.2.6" />
+    <PackageReference Include="Betalgo.OpenAI" Version="8.6.1" />
   </ItemGroup>
 
   <ItemGroup>
