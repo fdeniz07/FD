@@ -370,3 +370,6 @@ FodyWeavers.xsd
 /FD.VideoTranscriberApp.ConsoleClient/ffmpeg.exe
 /FD.VideoTranscriberApp.ConsoleClient/ffplay.exe
 /FD.VideoTranscriberApp.ConsoleClient/ffprobe.exe
+/FD.VideoTranscriberApp.BlazorUI/wwwroot/uploads
+/FD.VideoTranscriberApp.BlazorUI/FD.VideoTranscriberApp.BlazorUI/wwwroot/uploads/0b111532-02e4-4d19-b562-846fd0b250b4.mp3
+/FD.VideoTranscriberApp.BlazorUI/FD.VideoTranscriberApp.BlazorUI/wwwroot/uploads/0b111532-02e4-4d19-b562-846fd0b250b4.VideoFile
