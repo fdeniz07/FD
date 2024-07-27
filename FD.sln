@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FD.BlazorGiftSuggestionApp"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VideoTranscriberApp", "VideoTranscriberApp", "{87E6E08D-78AC-4E8C-8C8E-E45E996064BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FD.VideoTranscriberApp.ConsoleClient", "FD.VideoTranscriberApp.ConsoleClient\FD.VideoTranscriberApp.ConsoleClient.csproj", "{F2173080-8226-4D00-B65D-48B69EED690E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FD.VideoTranscriberApp.ConsoleClient", "FD.VideoTranscriberApp.ConsoleClient\FD.VideoTranscriberApp.ConsoleClient.csproj", "{F2173080-8226-4D00-B65D-48B69EED690E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FD.VideoTranscriberApp.BlazorUI", "FD.VideoTranscriberApp.BlazorUI\FD.VideoTranscriberApp.BlazorUI\FD.VideoTranscriberApp.BlazorUI.csproj", "{78745E4A-CEF3-4C4E-AF81-12CE374CC4FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FD.VideoTranscriberApp.BlazorUI.Client", "FD.VideoTranscriberApp.BlazorUI\FD.VideoTranscriberApp.BlazorUI.Client\FD.VideoTranscriberApp.BlazorUI.Client.csproj", "{6C52598F-95F5-4AA9-A918-7242B54F3FC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,12 +39,22 @@ Global
 		{F2173080-8226-4D00-B65D-48B69EED690E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2173080-8226-4D00-B65D-48B69EED690E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2173080-8226-4D00-B65D-48B69EED690E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78745E4A-CEF3-4C4E-AF81-12CE374CC4FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78745E4A-CEF3-4C4E-AF81-12CE374CC4FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78745E4A-CEF3-4C4E-AF81-12CE374CC4FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78745E4A-CEF3-4C4E-AF81-12CE374CC4FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C52598F-95F5-4AA9-A918-7242B54F3FC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C52598F-95F5-4AA9-A918-7242B54F3FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C52598F-95F5-4AA9-A918-7242B54F3FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C52598F-95F5-4AA9-A918-7242B54F3FC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F2173080-8226-4D00-B65D-48B69EED690E} = {87E6E08D-78AC-4E8C-8C8E-E45E996064BE}
+		{78745E4A-CEF3-4C4E-AF81-12CE374CC4FE} = {87E6E08D-78AC-4E8C-8C8E-E45E996064BE}
+		{6C52598F-95F5-4AA9-A918-7242B54F3FC5} = {87E6E08D-78AC-4E8C-8C8E-E45E996064BE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B8F01296-4F1A-43C5-B303-ECEF033E34D2}
