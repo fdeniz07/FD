@@ -1,64 +1,21 @@
 ﻿@page "/weather"
+@using FD.VideoTranscriberApp.BlazorUI.Client.Enums
 @attribute [StreamRendering]
 
 <PageTitle>Weather</PageTitle>
 
 <h1>Weather</h1>
 
-<p>This component demonstrates showing data.</p>
+<PageTitle>Weather</PageTitle>
 
-@if (forecasts == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+<DaisyButton Style="@ButtonStyle.Primary" Text="Button Primary"/>
+<DaisyButton Style="@ButtonStyle.Secondary" Text="Button Secondary" />
+<DaisyButton Style="@ButtonStyle.Neutral" Text="Button Neutral" />
+<DaisyButton Style="@ButtonStyle.Accent" Text="Button Accent" />
+<DaisyButton Style="@ButtonStyle.Error" Text="Button Error" />
 
-@code {
-    private WeatherForecast[]? forecasts;
 
-    protected override async Task OnInitializedAsync()
-    {
-        // Simulate asynchronous loading to demonstrate streaming rendering
-        await Task.Delay(500);
-
-        var startDate = DateOnly.FromDateTime(DateTime.Now);
-        var summaries = new[] { "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching" };
-        forecasts = Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        {
-            Date = startDate.AddDays(index),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = summaries[Random.Shared.Next(summaries.Length)]
-        }).ToArray();
-    }
-
-    private class WeatherForecast
-    {
-        public DateOnly Date { get; set; }
-        public int TemperatureC { get; set; }
-        public string? Summary { get; set; }
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-    }
-}
+<DaisyButton Style="@ButtonStyle.Primary" Size="ButtonSize.ExtraSmall" Text="ExtraSmall" />
+<DaisyButton Style="@ButtonStyle.Secondary" Size="ButtonSize.Small" Text="Small" />
+<DaisyButton Style="@ButtonStyle.Neutral" Size="ButtonSize.Medium" Text="Medium" />
+<DaisyButton Style="@ButtonStyle.Accent" Size="ButtonSize.Large" Text="Large"  />
