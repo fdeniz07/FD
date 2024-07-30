@@ -22,3 +22,10 @@
 
 #### Response
 <img src="https://github.com/fdeniz07/FD/blob/master/Images/Gift%20Suggestions%20App/2-Response.JPG" />
+
+## 4-Video Transcriber App
+### Console Client
+
+### WASM (Client Side)
+
+### SSR (Server Side Rendering)
