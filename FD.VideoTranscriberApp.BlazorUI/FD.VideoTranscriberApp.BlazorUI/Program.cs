@@ -1,5 +1,7 @@
+using BlazorDownloadFile;
 using FD.VideoTranscriberApp.BlazorUI.Client.Pages;
 using FD.VideoTranscriberApp.BlazorUI.Components;
+using FD.VideoTranscriberApp.BlazorUI.Services.Concretes;
 using OpenAI.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +21,10 @@ var openAIApiKey = builder
     .Value;
 
 builder.Services.AddOpenAIService(settings => settings.ApiKey = openAIApiKey);
+
+builder.Services.AddScoped<TranscriptionManager>();
+
+builder.Services.AddBlazorDownloadFile(ServiceLifetime.Scoped);
 
 var app = builder.Build();
 

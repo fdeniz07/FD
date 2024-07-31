@@ -1,4 +1,4 @@
-﻿using FD.VideoTranscriberApp.BlazorUI.Models;
+﻿using FD.VideoTranscriberApp.BlazorUI.Client.Models;
 using Microsoft.AspNetCore.Mvc;
 using OpenAI.Interfaces;
 using OpenAI.ObjectModels;

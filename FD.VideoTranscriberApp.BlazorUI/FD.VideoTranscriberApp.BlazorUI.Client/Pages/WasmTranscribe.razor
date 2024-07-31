@@ -3,6 +3,7 @@
 @using System.ComponentModel.DataAnnotations
 @using FD.VideoTranscriberApp.BlazorUI.Client.Components
 @using FD.VideoTranscriberApp.BlazorUI.Client.Enums
+@using FD.VideoTranscriberApp.BlazorUI.Client.Models
 @rendermode InteractiveWebAssembly
 @inject HttpClient HttpClient
 
@@ -149,9 +150,5 @@
         public bool IsFileSelected { get; set; } = false;
     }
 
-    public class TranscriptionModel
-    {
-        public string Language { get; set; }
-        public string Text { get; set; }
-    }
+
 }
